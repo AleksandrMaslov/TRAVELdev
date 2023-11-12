@@ -1,0 +1,24 @@
+.button {
+  width: 100%;
+  padding: 15px 20px;
+
+  border-radius: 5px;
+  font-weight: 600;
+  color: var(--font-light-color);
+  background-color: var(--synsys-pale-color);
+  transition: all 0.1s cubic-bezier(0.77, 0, 0.175, 1);
+  cursor: pointer;
+}
+
+.button:disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.button:hover {
+  filter: drop-shadow(4px 4px 5px rgba(0, 0, 0, 0.5));
+}
+
+.button:active {
+  filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.5));
+}

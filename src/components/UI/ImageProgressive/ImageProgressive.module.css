@@ -1,0 +1,13 @@
+.imageProgressive {
+  object-fit: cover;
+  object-position: center;
+  transition: filter 0.3s linear;
+}
+
+.loading {
+  filter: blur(10px);
+}
+
+.loaded {
+  filter: blur(0);
+}

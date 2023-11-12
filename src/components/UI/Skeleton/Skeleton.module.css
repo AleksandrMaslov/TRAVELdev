@@ -1,0 +1,41 @@
+.skeleton {
+  height: 100%;
+  width: 100%;
+
+  position: absolute;
+  z-index: 5;
+  overflow: hidden;
+
+  background-color: transparent;
+  animation: skeletonBgAnimation 0.5s forwards;
+}
+
+.skeleton::after {
+  height: 100%;
+  width: 100%;
+
+  position: absolute;
+  z-index: 10;
+  transform: translateX(-100%);
+
+  content: '';
+  background-image: linear-gradient(
+    0.25turn,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0)
+  );
+  animation: skeletonAnimation 2s infinite;
+}
+
+@keyframes skeletonAnimation {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes skeletonBgAnimation {
+  100% {
+    background-color: #dddbdd;
+  }
+}

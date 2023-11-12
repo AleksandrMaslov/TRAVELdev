@@ -1,0 +1,88 @@
+.modal {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #111;
+  background-color: rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+}
+
+.modal_active {
+  pointer-events: all;
+  animation: inAnimation 0.25s ease-in;
+}
+
+.modal_hidden {
+  animation: outAnimation 0.27s ease-out;
+}
+
+.window {
+  display: flex;
+  min-width: 250px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.window_active {
+  animation: inAnimation 0.25s ease-in forwards,
+    inWindowAnimation 0.25s ease-in forwards;
+}
+
+.window_hidden {
+  animation: outAnimation 0.27s ease-in forwards,
+    outWindowAnimation 0.27s ease-in forwards;
+}
+
+.container {
+  flex: 1 1 auto;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@keyframes inAnimation {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes outAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes inWindowAnimation {
+  0% {
+    scale: 0.5;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+@keyframes outWindowAnimation {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 0.5;
+  }
+}
