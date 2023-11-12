@@ -1,7 +1,8 @@
 import { FC } from 'react'
 
+import SvgMottoHighlighter from 'src/assets/SvgMottoHighlighter'
+
 import classes from './Motto.module.css'
-import SvgHighlighter from './SvgHighlighter'
 
 const Motto: FC = () => {
   const { motto, highlight } = classes
@@ -13,7 +14,7 @@ const Motto: FC = () => {
       <h1>Держать друг друга за руку до старости!</h1>
       <h1>Целовать, поддерживать и обнимать!</h1>
 
-      <SvgHighlighter className={highlight} />
+      <SvgMottoHighlighter className={highlight} />
     </section>
   )
 }

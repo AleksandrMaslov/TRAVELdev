@@ -4,7 +4,7 @@ interface SvgHighlighterProps {
   className?: string
 }
 
-const SvgHighlighter: FC<SvgHighlighterProps> = ({ className }) => {
+const SvgMottoHighlighter: FC<SvgHighlighterProps> = ({ className }) => {
   return (
     <svg
       width="632"
@@ -24,4 +24,4 @@ const SvgHighlighter: FC<SvgHighlighterProps> = ({ className }) => {
   )
 }
 
-export default SvgHighlighter
+export default SvgMottoHighlighter
