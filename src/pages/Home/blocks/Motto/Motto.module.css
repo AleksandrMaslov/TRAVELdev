@@ -1,0 +1,11 @@
+.motto {
+  position: relative;
+  margin: 95px 135px 120px;
+}
+
+.highlight {
+  position: absolute;
+  top: 0;
+  left: 22rem;
+  z-index: -1;
+}

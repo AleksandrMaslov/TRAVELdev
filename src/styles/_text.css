@@ -9,7 +9,8 @@ h6 {
 
 h1 {
   font-size: 4.375rem;
-  letter-spacing: 0.15rem;
+  letter-spacing: 0.05rem;
+  font-weight: 400;
 }
 
 h2 {

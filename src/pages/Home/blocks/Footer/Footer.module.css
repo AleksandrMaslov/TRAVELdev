@@ -1,0 +1,34 @@
+.footer {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+  margin: 0px 0px 130px 135px;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.backgroundText {
+  position: absolute;
+  bottom: 0;
+  color: var(--white);
+  font-size: 6.25rem;
+  white-space: nowrap;
+}
