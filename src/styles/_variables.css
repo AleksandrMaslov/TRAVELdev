@@ -1,4 +1,11 @@
 :root {
   --container-max-width: 1440px;
   --container-min-width: 380px;
+
+  --black: #242424;
+  --white: #fff;
+  --light-gray: #f0f0f0;
+  --gray: #cfcfcf;
+  --dark-gray: #707070;
+  --yellow: #fdffaa;
 }
