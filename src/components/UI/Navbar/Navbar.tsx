@@ -1,9 +1,6 @@
 import { FC } from 'react'
 
-import { useAuth } from 'src/hooks'
-import { routes, RoutesEnum } from 'src/router'
-
-import { LoaderLock, UserProfile } from '..'
+import { routes } from 'src/router'
 
 import CustomNavLink from './CustomNavLink'
 import classes from './Navbar.module.css'
@@ -14,8 +11,6 @@ interface NavbarProps {
 }
 
 const Navbar: FC<NavbarProps> = ({ opened, toggleOpened }) => {
-  const auth = useAuth()
-
   return (
     <nav
       className={classes.navbar}
@@ -28,32 +23,13 @@ const Navbar: FC<NavbarProps> = ({ opened, toggleOpened }) => {
           : undefined
       }
     >
-      {auth?.isLoading && <LoaderLock className={classes.loader} />}
-
       {routes
         .filter(({ navbar }) => navbar)
         .map(({ name, path }) => (
-          <CustomNavLink
-            key={path}
-            to={path}
-            onClick={toggleOpened}
-            progress={auth?.isLoading}
-          >
+          <CustomNavLink key={path} to={path} onClick={toggleOpened}>
             {name}
           </CustomNavLink>
         ))}
-
-      {auth?.user ? (
-        <UserProfile />
-      ) : (
-        <CustomNavLink
-          to={RoutesEnum.LOGIN}
-          onClick={toggleOpened}
-          progress={auth?.isLoading}
-        >
-          Login
-        </CustomNavLink>
-      )}
     </nav>
   )
 }
