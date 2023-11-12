@@ -1,2 +1,8 @@
 .homePage {
 }
+
+.container {
+  margin: auto;
+  max-width: var(--container-max-width);
+  min-width: var(--container-min-width);
+}
