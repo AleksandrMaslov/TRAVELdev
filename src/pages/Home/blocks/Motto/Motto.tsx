@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-import SvgMottoHighlighter from 'src/assets/SvgMottoHighlighter'
+import { SvgMottoHighlighter } from 'src/assets'
 
 import classes from './Motto.module.css'
 

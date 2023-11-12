@@ -1,8 +1,6 @@
 import { FC } from 'react'
 
-import SvgFooterHighlighter from 'src/assets/SvgFooterHighlighter'
-import SvgMountains from 'src/assets/SvgMountains'
-import SvgUnderline from 'src/assets/SvgUnderline'
+import { SvgFooterHighlighter, SvgMountains, SvgUnderline } from 'src/assets'
 
 import classes from './Footer.module.css'
 
