@@ -5,7 +5,7 @@ import classes from './Cover.module.css'
 const Cover: FC = () => {
   const { cover } = classes
 
-  return <section className={cover}>Cover</section>
+  return <section className={cover}></section>
 }
 
 export default Cover

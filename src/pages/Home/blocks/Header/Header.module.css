@@ -1,0 +1,11 @@
+.header {
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-between;
+  margin: 40px 70px 0px;
+}
