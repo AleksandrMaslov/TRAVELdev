@@ -4,19 +4,35 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Poppins, Inter, Helvetica, Arial, sans-serif;
   font-weight: 600;
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 4.375rem;
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 4.0625rem;
 }
 
+h3 {
+  font-size: 2.625rem;
+}
+
+h4 {
+  font-size: 1.6875rem;
+}
+
+h5 {
+  font-size: 1.6875rem;
+  font-weight: 400;
+}
+/* 
 @media (width < 450px) {
+  p {
+    font-size: 12px;
+  }
+
   h1 {
     font-size: 20px;
   }
@@ -28,10 +44,4 @@ h2 {
   h3 {
     font-size: 12px;
   }
-}
-
-@media (width < 450px) {
-  p {
-    font-size: 12px;
-  }
-}
+} */
