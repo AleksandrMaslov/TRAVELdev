@@ -12,3 +12,33 @@
   position: absolute;
   top: 0;
 }
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.year {
+  margin-right: 150px;
+  margin-top: 40px;
+}
+
+.yearTrips {
+  width: 100%;
+}
+
+.trip {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 40px;
+  margin-top: 40px;
+}
+
+.trip:not(:last-child) {
+  border-bottom: 1px solid var(--gray);
+}
+
+.flag {
+  margin-right: 30px;
+}

@@ -1,26 +1,26 @@
-import {
-  createBrowserRouter,
-  createRoutesFromElements,
-  Route,
-} from 'react-router-dom'
+import { createBrowserRouter } from 'react-router-dom'
 
 import { ErrorRouteElement } from 'src/components/errors'
+import { HomePage } from 'src/pages'
 
-import { routes } from './routes'
+import { RoutesEnum, routes } from './routes'
 
 const router = createBrowserRouter(
-  createRoutesFromElements(
-    routes
-      .filter(({ routing }) => routing)
-      .map(({ path, ...props }) => (
-        <Route
-          key={path}
-          path={path}
-          {...props}
-          errorElement={<ErrorRouteElement />}
-        />
-      )),
-  ),
+  [
+    {
+      path: RoutesEnum.HOME,
+      element: <HomePage />,
+      errorElement: <ErrorRouteElement />,
+      children: routes.map(({ path, element, loader }) => {
+        return {
+          path,
+          element,
+          loader,
+          errorElement: <ErrorRouteElement />,
+        }
+      }),
+    },
+  ],
   {
     basename: '/TRAVEL',
   },

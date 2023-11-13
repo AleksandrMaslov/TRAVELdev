@@ -1,7 +1,6 @@
 import { FC } from 'react'
 
-import Logo from 'src/components/project/Logo/Logo'
-import TempBurger from 'src/components/project/TempBurger/TempBurger'
+import { Logo, TempBurger } from 'src/components/project'
 import { useStyles } from 'src/hooks'
 
 import classes from './Header.module.css'

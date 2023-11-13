@@ -1,0 +1,7 @@
+.albums {
+}
+
+.container {
+  margin: 0px 135px 130px;
+  border-bottom: 1px solid var(--gray);
+}

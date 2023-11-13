@@ -1,17 +1,17 @@
 import { ReactNode } from 'react'
 import { LoaderFunction, Navigate } from 'react-router-dom'
 
-import { HomePage } from 'src/pages'
-
 export const enum RoutesEnum {
   HOME = '/',
+  WEDDING = 'wedding',
+  OTHER = 'other',
+  BRUNYA = 'brunya',
   DEFAULT = '*',
 }
 
 interface IRoute {
   name: string
   navbar: boolean
-  routing: boolean
   path: string
   element: ReactNode
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -20,16 +20,32 @@ interface IRoute {
 
 export const routes: IRoute[] = [
   {
-    name: 'Home',
+    name: 'Путешествия',
     navbar: true,
-    routing: true,
     path: RoutesEnum.HOME,
-    element: <HomePage />,
+    element: <p>TRIPS</p>,
+  },
+  {
+    name: 'Свадьба',
+    navbar: true,
+    path: RoutesEnum.WEDDING,
+    element: <p>WEDDING</p>,
+  },
+  {
+    name: 'Разное',
+    navbar: true,
+    path: RoutesEnum.OTHER,
+    element: <p>OTHER</p>,
+  },
+  {
+    name: 'Бруня',
+    navbar: true,
+    path: RoutesEnum.BRUNYA,
+    element: <p>BRUNYA</p>,
   },
   {
     name: '*',
     navbar: false,
-    routing: true,
     path: RoutesEnum.DEFAULT,
     element: <Navigate to={RoutesEnum.HOME} replace />,
   },
