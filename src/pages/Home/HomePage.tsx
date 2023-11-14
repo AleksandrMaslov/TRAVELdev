@@ -1,14 +1,22 @@
 import { FC } from 'react'
 
 import { SvgFlagBelarus } from 'src/assets'
-import { Tabs } from 'src/components/project'
+import { Cover, Footer, Header, Motto, Tabs } from 'src/components/project'
 
-import { Albums, Cover, Footer, Header, Motto } from './blocks'
 import classes from './HomePage.module.css'
 
 const HomePage: FC = () => {
-  const { homePage, header, container, wrapper, year, yearTrips, trip, flag } =
-    classes
+  const {
+    homePage,
+    container,
+    header,
+    albums,
+    wrapper,
+    year,
+    yearTrips,
+    trip,
+    flag,
+  } = classes
   return (
     <div className={homePage}>
       <div className={container}>
@@ -16,7 +24,7 @@ const HomePage: FC = () => {
         <Cover />
         <Motto />
 
-        <Albums>
+        <div className={albums}>
           <Tabs />
 
           <div className={wrapper}>
@@ -42,7 +50,7 @@ const HomePage: FC = () => {
               </div>
             </div>
           </div>
-        </Albums>
+        </div>
 
         <Footer />
       </div>

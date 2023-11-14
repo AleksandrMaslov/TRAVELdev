@@ -1,5 +1,0 @@
-export { default as Albums } from './Albums/Albums'
-export { default as Cover } from './Cover/Cover'
-export { default as Footer } from './Footer/Footer'
-export { default as Header } from './Header/Header'
-export { default as Motto } from './Motto/Motto'
