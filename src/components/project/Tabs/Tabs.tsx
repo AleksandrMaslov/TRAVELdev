@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-import { routes } from 'src/router'
+import { routes } from 'src/router/routes'
 
 import { Tab } from '..'
 

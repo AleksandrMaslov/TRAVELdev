@@ -44,7 +44,7 @@ export const routes: IRoute[] = [
     element: <p>BRUNYA</p>,
   },
   {
-    name: '*',
+    name: RoutesEnum.DEFAULT,
     navbar: false,
     path: RoutesEnum.DEFAULT,
     element: <Navigate to={RoutesEnum.HOME} replace />,
