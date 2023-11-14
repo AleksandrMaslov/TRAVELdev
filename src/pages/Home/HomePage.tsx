@@ -5,6 +5,22 @@ import { Cover, Footer, Header, Motto, Tabs } from 'src/components/project'
 
 import classes from './HomePage.module.css'
 
+const data = [
+  {
+    id: '001',
+    year: '2018',
+    '01': 'bali',
+    '02': 'russia',
+    '03': 'italy',
+  },
+  {
+    id: '2',
+    '01': 'turkey',
+    '02': 'belarus',
+    '03': 'china',
+  },
+]
+
 const HomePage: FC = () => {
   const {
     homePage,
@@ -17,6 +33,7 @@ const HomePage: FC = () => {
     trip,
     flag,
   } = classes
+
   return (
     <div className={homePage}>
       <div className={container}>
