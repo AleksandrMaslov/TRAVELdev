@@ -1,16 +1,21 @@
 import { FC } from 'react'
 
+import { useStyles } from 'src/hooks'
 import { routes } from 'src/router/routes'
 
 import { Tab } from '..'
 
 import classes from './Tabs.module.css'
 
-const Tabs: FC = () => {
-  const { tabs } = classes
+interface TabsProps {
+  className?: string
+}
+
+const Tabs: FC<TabsProps> = ({ className }) => {
+  const tabsClasses = useStyles(classes.tabs, className)
 
   return (
-    <nav className={tabs}>
+    <nav className={tabsClasses}>
       {routes
         .filter(({ navbar }) => navbar)
         .map(({ name, path }) => (

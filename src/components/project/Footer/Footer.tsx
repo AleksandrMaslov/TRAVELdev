@@ -8,7 +8,7 @@ const Footer: FC = () => {
   const { footer, container, wrapper, text, backgroundText } = classes
 
   return (
-    <section className={footer}>
+    <footer className={footer}>
       <div className={container}>
         <div className={wrapper}>
           <h1 className={text}>
@@ -27,7 +27,7 @@ const Footer: FC = () => {
         мурр мурр мурр мурр мурр мурр мурр мурр
       </h1>
       <SvgUnderline />
-    </section>
+    </footer>
   )
 }
 

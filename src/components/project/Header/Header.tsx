@@ -14,12 +14,12 @@ const Header: FC<HeaderProps> = ({ className }) => {
   const headerClasses = useStyles(header, className)
 
   return (
-    <div className={headerClasses}>
+    <header className={headerClasses}>
       <div className={container}>
         <Logo />
         <TempBurger />
       </div>
-    </div>
+    </header>
   )
 }
 

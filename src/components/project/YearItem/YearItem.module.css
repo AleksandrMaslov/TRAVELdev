@@ -1,0 +1,14 @@
+.yearItem {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  padding-top: 40px;
+}
+
+.yearItem:not(:first-child) {
+  border-top: 1px solid var(--gray);
+}
+
+.trips {
+  width: 100%;
+}

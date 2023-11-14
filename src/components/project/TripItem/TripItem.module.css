@@ -1,0 +1,16 @@
+.tripItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 40px;
+  gap: 30px;
+}
+
+.tripItem:not(:first-child) {
+  padding-top: 40px;
+  border-top: 1px solid var(--gray);
+}
+
+.description {
+  color: var(--red);
+}
