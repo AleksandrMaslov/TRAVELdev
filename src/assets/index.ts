@@ -1,7 +1,7 @@
-export { default as SvgFlagBali } from './SvgFlagBali'
 export { default as SvgFlagBelarus } from './SvgFlagBelarus'
 export { default as SvgFlagChina } from './SvgFlagChina'
 export { default as SvgFlagEgypt } from './SvgFlagEgypt'
+export { default as SvgFlagIndonesia } from './SvgFlagIndonesia'
 export { default as SvgFlagItaly } from './SvgFlagItaly'
 export { default as SvgFlagPhilippines } from './SvgFlagPhilippines'
 export { default as SvgFlagRussia } from './SvgFlagRussia'

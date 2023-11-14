@@ -1,8 +1,8 @@
 import {
-  SvgFlagBali,
   SvgFlagBelarus,
   SvgFlagChina,
   SvgFlagEgypt,
+  SvgFlagIndonesia,
   SvgFlagItaly,
   SvgFlagPhilippines,
   SvgFlagRussia,
@@ -13,7 +13,7 @@ import {
 import { ICountry } from 'src/models'
 
 const countries: { [key: string]: ICountry } = {
-  bali: { name: 'Бали', flag: <SvgFlagBali /> },
+  indonesia: { name: 'Индонезия', flag: <SvgFlagIndonesia /> },
   belarus: { name: 'Беларусь', flag: <SvgFlagBelarus /> },
   china: { name: 'Китай', flag: <SvgFlagChina /> },
   egypt: { name: 'Египет', flag: <SvgFlagEgypt /> },

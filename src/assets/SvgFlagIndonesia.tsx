@@ -1,10 +1,10 @@
 import { FC } from 'react'
 
-interface SvgFlagBaliProps {
+interface SvgFlagIndonesiaProps {
   className?: string
 }
 
-const SvgFlagBali: FC<SvgFlagBaliProps> = ({ className }) => {
+const SvgFlagIndonesia: FC<SvgFlagIndonesiaProps> = ({ className }) => {
   return (
     <svg
       width="70"
@@ -30,4 +30,4 @@ const SvgFlagBali: FC<SvgFlagBaliProps> = ({ className }) => {
   )
 }
 
-export default SvgFlagBali
+export default SvgFlagIndonesia
