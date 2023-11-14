@@ -9,7 +9,7 @@ export function ErrorRouteElement() {
   const error = useRouteError()
   return (
     <div className={errorRouteElement}>
-      <p>Error: {getErrorMessage(error)}</p>
+      <h3>Error: {getErrorMessage(error)}</h3>
     </div>
   )
 }
