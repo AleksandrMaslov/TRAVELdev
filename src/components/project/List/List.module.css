@@ -2,15 +2,4 @@
   display: flex;
   flex-direction: column;
   opacity: 0;
-  animation: smoothMounting 0.2s cubic-bezier(0.77, 0, 0.175, 1) 0s 1 normal
-    forwards;
-}
-
-@keyframes smoothMounting {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
