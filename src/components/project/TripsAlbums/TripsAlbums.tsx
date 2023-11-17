@@ -6,11 +6,17 @@ import { AlbumsService } from 'src/services'
 
 import { List, TripItem, YearItem } from '..'
 
+import classes from './TripsAlbums.module.css'
+
 const TripsAlbums: FC = () => {
   const { data } = useLoaderData() as { data: [string, ITrip[]][] }
 
   return (
-    <Suspense fallback={<h2>Вспоминаем наши путешествия...</h2>}>
+    <Suspense
+      fallback={
+        <h2 className={classes.loader}>Вспоминаем наши путешествия...</h2>
+      }
+    >
       <Await resolve={data}>
         {resolvedData => (
           <List
