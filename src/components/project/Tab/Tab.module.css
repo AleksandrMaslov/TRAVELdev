@@ -2,10 +2,23 @@
   position: relative;
 }
 
-.text:hover,
+.text {
+  transition: transform 0.1s ease-out;
+}
+
+.text:hover {
+  font-weight: 600;
+  letter-spacing: -0.007rem;
+}
+
+.text:active {
+  transform: scale(1.05);
+}
+
 .text_active {
   font-weight: 600;
   letter-spacing: -0.007rem;
+  pointer-events: none;
 }
 
 .highlight {
