@@ -1,9 +1,11 @@
-import { FC } from 'react'
+import React, { FC, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import { ITrip } from 'src/models'
 import { RoutesEnum } from 'src/router/routes'
 import countries from 'src/utils/countries'
+
+import { Preview } from '..'
 
 import classes from './TripItem.module.css'
 
@@ -16,15 +18,31 @@ const TripItem: FC<TripItemProps> = ({ trip }) => {
   const { name, flag } = countries[country]
   const path = RoutesEnum.TRIP.replace(':id', id)
 
-  return (
-    <Link to={path} className={classes.tripItem}>
-      {flag}
+  const [isPreviewed, setPreviewed] = useState<boolean>(false)
 
-      <h2>{name}</h2>
+  const extendedFlag = React.cloneElement(flag, {
+    className: classes.no_events,
+  })
+
+  const mouseOverHandler = () => setPreviewed(true)
+  const mouseLeaveHandler = () => setPreviewed(false)
+
+  return (
+    <Link
+      to={path}
+      className={classes.tripItem}
+      onMouseOver={mouseOverHandler}
+      onMouseLeave={mouseLeaveHandler}
+    >
+      {extendedFlag}
+
+      <h2 className={classes.no_events}>{name}</h2>
 
       {description && <h3 className={classes.description}>{description}</h3>}
 
-      {place && <h5>{`(${place})`}</h5>}
+      {place && <h5 className={classes.no_events}>{`(${place})`}</h5>}
+
+      {isPreviewed && <Preview className={classes.preview} />}
     </Link>
   )
 }

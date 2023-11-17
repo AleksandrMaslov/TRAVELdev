@@ -1,8 +1,8 @@
-import { ReactNode } from 'react'
+import { ReactElement } from 'react'
 
 interface ICountry {
   name: string
-  flag: ReactNode
+  flag: ReactElement
 }
 
 export default ICountry

@@ -1,0 +1,8 @@
+.preview {
+  padding: 20px;
+  width: 300px;
+  height: 400px;
+  border-radius: 10px;
+  background-color: #aaa;
+  z-index: 100;
+}

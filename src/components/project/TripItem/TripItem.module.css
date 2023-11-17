@@ -1,4 +1,5 @@
 .tripItem {
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -13,4 +14,16 @@
 
 .description {
   color: var(--red);
+  pointer-events: none;
+}
+
+.no_events {
+  pointer-events: none;
+}
+
+.preview {
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  transform: translate(-50%, -50%);
 }
