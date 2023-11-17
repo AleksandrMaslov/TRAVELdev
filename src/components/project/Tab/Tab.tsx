@@ -1,31 +1,34 @@
-import { MotionProps, motion } from 'framer-motion'
-import { FC, ReactNode } from 'react'
-import { useMatch } from 'react-router-dom'
+import { motion } from 'framer-motion'
+import { FC, ForwardedRef, ReactNode, forwardRef } from 'react'
+import { Link, useMatch } from 'react-router-dom'
 
 import { SvgTabsHighlighter } from 'src/assets'
 import { useStyles } from 'src/hooks'
 
 import classes from './Tab.module.css'
 
-interface TabProps extends MotionProps {
+interface TabProps {
   children: ReactNode | string
   to: string
 }
 
-const Tab: FC<TabProps> = props => {
-  const { tab, text, text_active, highlight } = classes
-  const { children, to, ...motionProps } = props
-  const path = `/TRAVEL${to}`
+const Tab: FC<TabProps> = forwardRef(
+  (props, ref: ForwardedRef<HTMLAnchorElement>) => {
+    const { tab, text, text_active, highlight } = classes
+    const { children, to } = props
 
-  const isActive = useMatch(to)
-  const textStyles = useStyles(text, isActive ? text_active : undefined)
+    const isActive = useMatch(to)
+    const textStyles = useStyles(text, isActive ? text_active : undefined)
 
-  return (
-    <motion.a href={path} className={tab} {...motionProps}>
-      <h5 className={textStyles}>{children}</h5>
-      {isActive && <SvgTabsHighlighter className={highlight} />}
-    </motion.a>
-  )
-}
+    return (
+      <Link ref={ref} to={to} className={tab}>
+        <h5 className={textStyles}>{children}</h5>
+        {isActive && <SvgTabsHighlighter className={highlight} />}
+      </Link>
+    )
+  },
+)
 
-export default Tab
+Tab.displayName = 'Tab'
+
+export default motion(Tab)
