@@ -8,7 +8,7 @@ import { RoutesEnum, routes } from './routes'
 const router = createBrowserRouter(
   [
     {
-      path: RoutesEnum.HOME,
+      path: RoutesEnum.TRIPS,
       element: <HomePage />,
       errorElement: <ErrorRouteElement />,
       children: routes.map(({ path, element, loader }) => {
