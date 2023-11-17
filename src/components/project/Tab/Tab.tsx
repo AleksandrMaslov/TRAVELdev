@@ -1,4 +1,5 @@
-import { FC, ReactNode } from 'react'
+import { motion } from 'framer-motion'
+import { FC, ReactNode, Ref, forwardRef } from 'react'
 import { Link, useMatch } from 'react-router-dom'
 
 import { SvgTabsHighlighter } from 'src/assets'
@@ -11,7 +12,7 @@ interface TabProps {
   to: string
 }
 
-const Tab: FC<TabProps> = props => {
+const Tab: FC<TabProps> = forwardRef((props, ref: Ref<HTMLAnchorElement>) => {
   const { tab, text, text_active, highlight } = classes
   const { children, to } = props
 
@@ -19,11 +20,13 @@ const Tab: FC<TabProps> = props => {
   const textStyles = useStyles(text, isActive ? text_active : undefined)
 
   return (
-    <Link to={to} className={tab}>
+    <Link ref={ref} to={to} className={tab}>
       <h5 className={textStyles}>{children}</h5>
       {isActive && <SvgTabsHighlighter className={highlight} />}
     </Link>
   )
-}
+})
 
-export default Tab
+Tab.displayName = 'Tab'
+
+export default motion(Tab)
