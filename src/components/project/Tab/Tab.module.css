@@ -2,6 +2,12 @@
   position: relative;
 }
 
+.text:hover,
+.text_active {
+  font-weight: 600;
+  letter-spacing: -0.007rem;
+}
+
 .highlight {
   position: absolute;
   top: 50%;
