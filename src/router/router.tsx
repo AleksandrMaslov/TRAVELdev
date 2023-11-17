@@ -1,7 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom'
 
 import { ErrorRouteElement } from 'src/components/errors'
-import { HomePage } from 'src/pages'
+import { HomePage, TripPage, tripLoader } from 'src/pages'
 
 import { RoutesEnum, routes } from './routes'
 
@@ -19,6 +19,12 @@ const router = createBrowserRouter(
           errorElement: <ErrorRouteElement />,
         }
       }),
+    },
+    {
+      path: RoutesEnum.TRIP,
+      element: <TripPage />,
+      errorElement: <ErrorRouteElement />,
+      loader: tripLoader,
     },
   ],
   {

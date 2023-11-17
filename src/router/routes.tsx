@@ -6,6 +6,7 @@ import { TripsAlbums } from 'src/components/project/TripsAlbums/TripsAlbums'
 
 export const enum RoutesEnum {
   TRIPS = '/',
+  TRIP = '/trips/:id',
   WEDDING = 'wedding',
   OTHER = 'other',
   BRUNYA = 'brunya',
