@@ -9,11 +9,14 @@ import { List, TripItem, YearItem } from '..'
 
 import classes from './TripsAlbums.module.css'
 
+const mountingvariants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { delay: 0.1, duration: 0.3 } },
+}
+
 const variants = {
-  hidden: { opacity: 0, x: -100 },
-  visible: (i: number) => {
-    return { opacity: 1, x: 0, transition: { delay: i * 0.1 } }
-  },
+  hidden: { opacity: 0, y: 80 },
+  visible: { opacity: 1, y: 0, transition: { delay: 0.1, duration: 0.3 } },
 }
 
 const TripsAlbums: FC = () => {
@@ -27,7 +30,6 @@ const TripsAlbums: FC = () => {
           initial="hidden"
           whileInView="visible"
           variants={variants}
-          custom={1}
         >
           Вспоминаем наши путешествия...
         </motion.h2>
@@ -37,6 +39,9 @@ const TripsAlbums: FC = () => {
         {resolvedData => (
           <AnimatePresence mode="wait">
             <List
+              initial="hidden"
+              whileInView="visible"
+              variants={mountingvariants}
               items={resolvedData}
               item={([year, trips]: [string, ITrip[]]) => (
                 <YearItem
@@ -50,7 +55,6 @@ const TripsAlbums: FC = () => {
                       initial="hidden"
                       whileInView="visible"
                       variants={variants}
-                      custom={1}
                       viewport={{ once: true }}
                     />
                   )}

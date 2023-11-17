@@ -12,10 +12,8 @@ interface TabsProps {
 }
 
 const variants = {
-  hidden: { opacity: 0, y: -100 },
-  visible: (i: number) => {
-    return { opacity: 1, y: 0, transition: { delay: i * 0.1 } }
-  },
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { delay: 0.1, duration: 0.2 } },
 }
 
 const Tabs: FC<TabsProps> = ({ className }) => {

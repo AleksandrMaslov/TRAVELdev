@@ -8,21 +8,19 @@ import classes from './Footer.module.css'
 const variantsCenter = {
   hidden: { opacity: 0, x: '-50%', y: '-20%' },
   visible: (i: number) => {
-    return { opacity: 1, x: '-50%', y: '-50%', transition: { delay: i * 0.2 } }
+    return {
+      opacity: 1,
+      x: '-50%',
+      y: '-50%',
+      transition: { delay: i * 0.2, duration: 0.3 },
+    }
   },
 }
 
 const variantsBottom = {
   hidden: { opacity: 0, y: 100 },
   visible: (i: number) => {
-    return { opacity: 1, y: 0, transition: { delay: i * 0.2 } }
-  },
-}
-
-const variantsImg = {
-  hidden: { opacity: 0, x: 200 },
-  visible: (i: number) => {
-    return { opacity: 1, x: 0, transition: { delay: i * 0.2 } }
+    return { opacity: 1, y: 0, transition: { delay: i * 0.2, duration: 0.3 } }
   },
 }
 
@@ -48,12 +46,7 @@ const Footer: FC = () => {
           <SvgFooterHighlighter />
         </div>
 
-        <SvgMountains
-          initial="hidden"
-          whileInView="visible"
-          custom={2}
-          variants={variantsImg}
-        />
+        <SvgMountains />
       </div>
 
       <motion.h1
