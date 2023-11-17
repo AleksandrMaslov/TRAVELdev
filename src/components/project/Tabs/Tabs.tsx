@@ -33,6 +33,7 @@ const Tabs: FC<TabsProps> = ({ className }) => {
             initial="hidden"
             whileInView="visible"
             variants={variants}
+            viewport={{ once: true }}
           >
             {name}
           </Tab>
