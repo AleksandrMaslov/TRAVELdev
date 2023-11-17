@@ -2,10 +2,10 @@
   display: flex;
   flex-direction: row;
   gap: 100px;
-  padding-top: 40px;
 }
 
 .yearItem:not(:first-child) {
+  padding-top: 40px;
   border-top: 1px solid var(--gray);
 }
 
