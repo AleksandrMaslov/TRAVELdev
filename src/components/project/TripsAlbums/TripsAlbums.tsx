@@ -32,9 +32,10 @@ const TripsAlbums: FC = () => {
 
 const getTrips = async () => {
   const dbresponse = await AlbumsService.getAllTrips()
-  if (!dbresponse) throw new Error('Server is not Responding.')
+  if (!dbresponse) throw new Error('Мозг не отвечает.')
   const { result, data } = dbresponse
-  if (!result || result !== 'success') throw new Error('Server Response Error.')
+  if (!result || result !== 'success')
+    throw new Error('Какие-то проблемы с памятью.')
 
   const trips = data.reduce(
     (acc, trip) => {
