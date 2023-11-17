@@ -1,6 +1,5 @@
-import { AnimatePresence } from 'framer-motion'
+import { AnimatePresence, MotionProps, motion } from 'framer-motion'
 import React, { FC, useState } from 'react'
-import { Link } from 'react-router-dom'
 
 import { ITrip } from 'src/models'
 import { RoutesEnum } from 'src/router/routes'
@@ -10,14 +9,14 @@ import { Preview } from '..'
 
 import classes from './TripItem.module.css'
 
-interface TripItemProps {
+interface TripItemProps extends MotionProps {
   trip: ITrip
 }
 
-const TripItem: FC<TripItemProps> = ({ trip }) => {
+const TripItem: FC<TripItemProps> = ({ trip, ...motionProps }) => {
   const { id, country, place, description } = trip
   const { name, flag } = countries[country]
-  const path = RoutesEnum.TRIP.replace(':id', id)
+  const path = `/TRAVEL${RoutesEnum.TRIP.replace(':id', id)}`
 
   const [isPreviewed, setPreviewed] = useState<boolean>(false)
 
@@ -29,8 +28,9 @@ const TripItem: FC<TripItemProps> = ({ trip }) => {
   const mouseLeaveHandler = () => setPreviewed(false)
 
   return (
-    <Link
-      to={path}
+    <motion.a
+      {...motionProps}
+      href={path}
       className={classes.tripItem}
       onMouseOver={mouseOverHandler}
       onMouseLeave={mouseLeaveHandler}
@@ -46,7 +46,7 @@ const TripItem: FC<TripItemProps> = ({ trip }) => {
       <AnimatePresence>
         {isPreviewed && <Preview className={classes.preview} />}
       </AnimatePresence>
-    </Link>
+    </motion.a>
   )
 }
 
