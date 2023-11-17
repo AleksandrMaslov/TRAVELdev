@@ -43,7 +43,17 @@ const TripsAlbums: FC = () => {
                   key={year}
                   title={year}
                   items={trips}
-                  item={(trip: ITrip) => <TripItem key={trip.id} trip={trip} />}
+                  item={(trip: ITrip) => (
+                    <TripItem
+                      key={trip.id}
+                      trip={trip}
+                      initial="hidden"
+                      whileInView="visible"
+                      variants={variants}
+                      custom={1}
+                      viewport={{ once: true }}
+                    />
+                  )}
                 />
               )}
             />
