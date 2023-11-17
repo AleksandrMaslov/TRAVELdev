@@ -5,7 +5,8 @@ import { IDBResponse, ITrip } from 'src/models'
 import { GASUrl } from './GoogleAppsScript'
 
 export default class AlbumsService {
-  private static TRIPS_ID = ''
+  private static TRIPS_ID =
+    'AKfycbyRBeGDS9YecpOxbDXHSe_fXEbnPz0fAssfuzhqF5-VawHQ1mjRNDz9lLMpXcNLqcx8'
 
   public static async getAllTrips(): Promise<IDBResponse<ITrip[]>> {
     const url = `${GASUrl(AlbumsService.TRIPS_ID)}?trips=all`
