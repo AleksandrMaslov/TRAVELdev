@@ -13,7 +13,7 @@ function YearItem<T>(props: YearItemProps<T>) {
 
   return (
     <article className={classes.yearItem}>
-      <h1>{title}</h1>
+      <h1 className={classes.title}>{title}</h1>
 
       <div className={classes.trips}>{items.map(item)}</div>
     </article>
