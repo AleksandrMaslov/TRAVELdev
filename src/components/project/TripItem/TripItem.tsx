@@ -1,3 +1,4 @@
+import { AnimatePresence } from 'framer-motion'
 import React, { FC, useState } from 'react'
 import { Link } from 'react-router-dom'
 
@@ -42,7 +43,9 @@ const TripItem: FC<TripItemProps> = ({ trip }) => {
 
       {place && <h5 className={classes.no_events}>{`(${place})`}</h5>}
 
-      {isPreviewed && <Preview className={classes.preview} />}
+      <AnimatePresence>
+        {isPreviewed && <Preview className={classes.preview} />}
+      </AnimatePresence>
     </Link>
   )
 }
