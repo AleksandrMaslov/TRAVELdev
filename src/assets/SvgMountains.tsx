@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion'
-import { FC, LegacyRef, forwardRef } from 'react'
+import { FC, ForwardedRef, forwardRef } from 'react'
 
 interface SvgMountainsProps {
   className?: string
 }
 
 const SvgMountains: FC<SvgMountainsProps> = forwardRef(
-  ({ className }, ref: LegacyRef<SVGSVGElement>) => {
+  ({ className }, ref: ForwardedRef<SVGSVGElement>) => {
     return (
       <svg
         ref={ref}

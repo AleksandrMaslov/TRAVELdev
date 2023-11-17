@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { FC, LegacyRef, forwardRef } from 'react'
+import { FC, ForwardedRef, forwardRef } from 'react'
 
 import { useStyles } from 'src/hooks'
 
@@ -10,7 +10,7 @@ interface TempBurgerProps {
 }
 
 const TempBurger: FC<TempBurgerProps> = forwardRef(
-  ({ className }, ref: LegacyRef<SVGSVGElement>) => {
+  ({ className }, ref: ForwardedRef<SVGSVGElement>) => {
     const { tempBurger } = classes
     const burgerClasses = useStyles(tempBurger, className)
 
