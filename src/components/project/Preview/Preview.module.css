@@ -4,7 +4,7 @@
   height: 400px;
   border-radius: 10px;
   background-color: #aaa;
-  border: 10px solid #838383;
+  border: 5px solid #838383;
   z-index: 100;
   transform-style: preserve-3d;
   overflow: hidden;
@@ -20,4 +20,5 @@
   left: 50%;
   transform: translate(-50%, -50%);
   height: 400px;
+  border-radius: 5px;
 }
