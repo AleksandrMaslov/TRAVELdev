@@ -1,3 +1,4 @@
+export { default as SvgArrow } from './SvgArrow'
 export { default as SvgFlagBelarus } from './SvgFlagBelarus'
 export { default as SvgFlagChina } from './SvgFlagChina'
 export { default as SvgFlagEgypt } from './SvgFlagEgypt'
