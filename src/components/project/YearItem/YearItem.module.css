@@ -1,18 +1,20 @@
 .yearItem {
+  position: relative;
   display: flex;
   flex-direction: row;
-  gap: 100px;
 }
 
 .yearItem:not(:first-child) {
-  /* padding-top: 40px; */
   border-top: 1px solid var(--gray);
 }
 
 .title {
+  top: 0;
+  position: absolute;
   padding-top: 40px;
 }
 
 .trips {
+  margin-left: 200px;
   width: 100%;
 }
