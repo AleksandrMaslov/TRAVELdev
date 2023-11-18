@@ -16,7 +16,8 @@ const mountingvariants = {
 
 const variants = {
   hidden: { opacity: 0, y: 80 },
-  visible: { opacity: 1, y: 0, transition: { delay: 0.1, duration: 0.3 } },
+  visible: { opacity: 0.8, y: 0, transition: { delay: 0.1, duration: 0.3 } },
+  hover: { opacity: 1 },
 }
 
 const TripsAlbums: FC = () => {
@@ -54,6 +55,7 @@ const TripsAlbums: FC = () => {
                       trip={trip}
                       initial="hidden"
                       whileInView="visible"
+                      whileHover="hover"
                       variants={variants}
                       viewport={{ once: true }}
                     />

@@ -6,12 +6,6 @@
   padding-bottom: 40px;
   gap: 30px;
   padding-top: 40px;
-  opacity: 0.8;
-  transition: opacity 0.3s ease-out;
-}
-
-.tripItem:hover {
-  opacity: 1;
 }
 
 .tripItem:not(:first-child) {
