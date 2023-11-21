@@ -1,7 +1,8 @@
 import { FC } from 'react'
 
 import bg from 'src/assets/bg.jpg'
-import { Image } from 'src/components/UI'
+import bgLQ from 'src/assets/bgLQ.jpg'
+import { ImageProgressive } from 'src/components/UI'
 
 import classes from './Cover.module.css'
 
@@ -10,7 +11,7 @@ const Cover: FC = () => {
 
   return (
     <section className={cover}>
-      <Image src={bg} className={img} />
+      <ImageProgressive src={bg} srcLQ={bgLQ} className={img} />
     </section>
   )
 }
