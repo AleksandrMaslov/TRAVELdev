@@ -1,11 +1,14 @@
-import { createBrowserRouter } from 'react-router-dom'
+import { createBrowserRouter, createHashRouter } from 'react-router-dom'
 
 import { ErrorRouteElement } from 'src/components/errors'
 import { HomePage, TripPage, tripLoader } from 'src/pages'
 
 import { RoutesEnum, routes } from './routes'
 
-const router = createBrowserRouter(
+const isHashRouter = import.meta.env.MODE === 'hash'
+const createRouter = isHashRouter ? createHashRouter : createBrowserRouter
+
+const router = createRouter(
   [
     {
       path: RoutesEnum.TRIPS,
@@ -28,7 +31,7 @@ const router = createBrowserRouter(
     },
   ],
   {
-    basename: '/TRAVEL',
+    basename: isHashRouter ? undefined : '/TRAVEL',
   },
 )
 
