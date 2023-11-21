@@ -1,8 +1,4 @@
-export { default as Burger } from './Burger/Burger'
 export { default as Button } from './Button/Button'
 export { default as Image } from './Image/Image'
 export { default as ImageProgressive } from './ImageProgressive/ImageProgressive'
-export { default as Loader } from './Loader/Loader'
-export { default as Modal } from './Modal/Modal'
-export { default as Navbar } from './Navbar/Navbar'
 export { default as Skeleton } from './Skeleton/Skeleton'
