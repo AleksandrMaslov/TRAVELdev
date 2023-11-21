@@ -1,9 +1,11 @@
 .image {
   position: relative;
   overflow: hidden;
+  height: 100%;
 }
 
 .img {
+  aspect-ratio: 1/1;
   object-fit: cover;
   height: 100%;
   width: 100%;
