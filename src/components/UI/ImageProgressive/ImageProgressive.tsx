@@ -10,16 +10,26 @@ interface ImageProgressiveProps extends ImgHTMLAttributes<HTMLImageElement> {
   srcLQ?: string
   className?: string
   width?: string
+  isSrcGD?: boolean
+  isSrcLQGD?: boolean
 }
 
 const ImageProgressive: FC<ImageProgressiveProps> = props => {
-  const { className, width = '100%', src, srcLQ, ...restProps } = props
+  const {
+    className,
+    width = '100%',
+    src,
+    srcLQ,
+    isSrcGD,
+    isSrcLQGD,
+    ...restProps
+  } = props
 
   const srcGD = useGoogleDriveImage(src)
   const srcLQGD = useGoogleDriveImage(srcLQ)
 
   const [imgSrc, setImgSrc] = useState<string | undefined>(
-    srcLQGD || defaultImgLQ,
+    (isSrcLQGD ? srcLQGD : srcLQ) || defaultImgLQ,
   )
 
   const image = useStyles(
@@ -30,8 +40,8 @@ const ImageProgressive: FC<ImageProgressiveProps> = props => {
 
   useEffect(() => {
     const img = new Image()
-    img.src = srcGD || defaultImg
-    img.onload = () => setImgSrc(srcGD || defaultImg)
+    img.src = (isSrcGD ? srcGD : src) || defaultImg
+    img.onload = () => setImgSrc((isSrcGD ? srcGD : src) || defaultImg)
   }, [])
 
   return <img src={imgSrc} className={image} width={width} {...restProps} />

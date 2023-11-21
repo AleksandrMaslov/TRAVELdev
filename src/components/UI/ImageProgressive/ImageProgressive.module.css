@@ -1,4 +1,5 @@
 .imageProgressive {
+  height: 100%;
   object-fit: cover;
   object-position: center;
   transition: filter 0.3s linear;
