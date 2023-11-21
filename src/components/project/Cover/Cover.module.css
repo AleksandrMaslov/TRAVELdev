@@ -1,9 +1,10 @@
 .cover {
-  height: 800px;
+  height: 670px;
   border-radius: 20px;
   margin-top: 20px;
 }
 
 .img {
   border-radius: inherit;
+  object-position: top -120px right 0px;
 }
